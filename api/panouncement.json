@@ -3,7 +3,7 @@
     "data": {
       "key": "",
       "promotion": {
-        "day": "17",
+        "day": "18",
         "slider": [
           {
             "link": "https://whatsupcrm.in/",
@@ -18,7 +18,7 @@
         "title": "Su licencia ha expirado",
         "description": "¡Haga clic ahora para Comprar Licencia y continuar sin problemas!",
         "button": {
-          "link": "https://wa.me/59178208309?text=Quiero%20Renovar%20mi%20Licencia",
+          "link": "https://wa.me/+59178208309?text=Quiero%20Renovar%20mi%20Licencia",
           "title": "Renueva tu licencia vencida hoy"
         }
       },
@@ -145,7 +145,7 @@
       "table_price": [
         {
           "id": 1122,
-          "url": "https://wa.me/59178208309?text=Quiero%20Activar%20mi%20Licencia%20Gratis",
+          "url": "https://wa.me/+59178208309?text=Quiero%20Activar%20mi%20Licencia%20Gratis",
           "title": "CRM Premium 2 Dias Gratis",
           "description": "<strong>TODAS LAS FUNCIONALIDADES ACTIVAS</strong>",
           "features": [
@@ -167,7 +167,7 @@
         },
         {
           "id": 1458,
-          "url": "https://wa.me/59178208309?text=Quiero%20Activar%20mi%20Licencia%20PREMIUM",
+          "url": "https://wa.me/+59178208309?text=Quiero%20Activar%20mi%20Licencia%20PREMIUM",
           "title": "CRM Premium",
           "description": "",
           "features": [
