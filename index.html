@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de panouncement.json</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        pre {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            padding: 15px;
+            background: #ffeeee;
+            border: 1px solid #ffcccc;
+        }
+        #loading {
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anuncios Importantes</h1>
+    <div id="loading">Cargando anuncios...</div>
+    <div id="contenido-json"></div>
+
+    <script>
+        // Ruta relativa al archivo JSON (asegúrate de que la estructura de carpetas sea correcta)
+        const jsonUrl = 'panouncement.json';
+        
+        // Elementos del DOM
+        const contenidoJson = document.getElementById('contenido-json');
+        const loading = document.getElementById('loading');
+
+        fetch(jsonUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                loading.style.display = 'none';
+                contenidoJson.innerHTML = `
+                    <h2>${data.titulo || 'Anuncios'}</h2>
+                    <p><strong>Última actualización:</strong> ${data.fecha || 'No especificada'}</p>
+                    <div class="anuncios">
+                        ${data.anuncios ? data.anuncios.map(anuncio => `
+                            <div class="anuncio">
+                                <h3>${anuncio.titulo}</h3>
+                                <p>${anuncio.contenido}</p>
+                                <small>Publicado: ${anuncio.fecha || 'Fecha no disponible'}</small>
+                            </div>
+                        `).join('') : '<p>No hay anuncios disponibles</p>'}
+                    </div>
+                    <pre style="margin-top: 20px;">${JSON.stringify(data, null, 2)}</pre>
+                `;
+            })
+            .catch(error => {
+                loading.style.display = 'none';
+                contenidoJson.innerHTML = `
+                    <div class="error">
+                        <h3>Error al cargar los anuncios</h3>
+                        <p>${error.message}</p>
+                        <p>Por favor verifica:</p>
+                        <ul>
+                            <li>Que el archivo <strong>panouncement.json</strong> existe en la carpeta <strong>/images</strong></li>
+                            <li>Que la estructura del JSON es válida</li>
+                            <li>Que has subido todos los archivos a GitHub</li>
+                        </ul>
+                        <p>Ruta intentada: <code>${jsonUrl}</code></p>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
