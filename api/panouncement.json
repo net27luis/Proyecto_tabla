@@ -3,7 +3,7 @@
     "data": {
       "key": "",
       "promotion": {
-        "day": "06",
+        "day": "17",
         "slider": [
           {
             "link": "https://whatsupcrm.in/",
@@ -35,7 +35,7 @@
       },
       "logo": {
         "data": {
-          "logo_image": "https://whatsupcrm.in/images/logo.png",
+          "logo_image": "https://i.ibb.co/bRBCqvkw/Blue-and-White-Minimalist-Dental-Clinic-Logo-3.png",
           "logo_link": {
             "title": "Whatsup CRM",
             "url": "https://wa.me/59178208309",
@@ -137,7 +137,7 @@
         }
       },
       "loading": {
-        "loading_image": "https://www.salezrobot.com/images/chelange-robo-img.jpg",
+        "loading_image": "https://i.ibb.co/bRBCqvkw/Blue-and-White-Minimalist-Dental-Clinic-Logo-3.png",
         "loading_title": "Bienvenido a WACRM",
         "loading_title_description": "<div style=\"text-align: center;\"><strong>Cargando bibliotecas…</strong>😁<br /><strong>Un momento, terminaremos enseguida.</strong>🙏</div>",
         "loading_button": "<p>Close</p>"
@@ -201,4 +201,3 @@
       ]
     }
   }
-  
